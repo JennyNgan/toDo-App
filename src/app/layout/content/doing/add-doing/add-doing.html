@@ -1,0 +1,41 @@
+<form
+  [formGroup]="newDoingForm"
+  autocomplete="off"
+  class="m-3"
+>
+  <div class="d-flex justify-content-between align-items-center">
+    <h4 mat-dialog-title>Thêm mới</h4>
+    <button class="btn btn-style">
+      <mat-icon (click)="onCancel()">close</mat-icon>
+    </button>
+  </div>
+
+  <mat-dialog-content>
+    <div class="row-control">
+      <mat-label class="form-label">Tiêu đề *</mat-label>
+      <mat-form-field appearance="outline" >
+        <input matInput placeholder="Nhập tiêu đề công việc" required formControlName="title"/>
+        <mat-error *ngIf="newDoingForm.get('title')?.hasError('required')">
+          Tiêu đề không được để trống
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row-control">
+      <mat-label class="form-label">Mô tả</mat-label>
+      <mat-form-field appearance="outline" floatLabel="auto">
+        <textarea
+          matInput
+          placeholder="Nhập mô tả chi tiết"
+          rows="3"
+          formControlName="description"
+        >
+        </textarea>
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button matButton cdkFocusInitial (click)="onAdd()">Thêm mới</button>
+    <button matButton (click)="onCancel()" color="warn">Cancle</button>
+  </mat-dialog-actions>
+</form>
+

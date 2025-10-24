@@ -1,0 +1,26 @@
+<div class="sidebar" [class.open]="isOpen">
+  <h4 class="text-primary fw-bold">Todo App</h4>
+  <div class="mt-5">
+    <button
+      *ngFor="let sidebarItem of sidebarItems"
+      class="btn btn-primary d-flex align-items-center mb-3 w-btn p"
+      [routerLink]="['/' + sidebarItem.status]"
+    >
+<!--      <mat-icon class="me-2">{{sidebarItem.icon}}</mat-icon>-->
+      <img [src]="sidebarItem.icon" alt="icon" width="24" height="24" class="me-2 rounded-circle" />
+      {{sidebarItem.label}}
+    </button>
+<!--    <button-->
+<!--      class="btn d-flex align-items-center mb-3 w-btn p"-->
+<!--    >-->
+<!--      <mat-icon class="me-2">check</mat-icon>-->
+<!--      Đã xong-->
+<!--    </button>-->
+<!--    <button-->
+<!--      class="btn d-flex align-items-center w-btn p"-->
+<!--    >-->
+<!--      <mat-icon class="me-2">archive</mat-icon>-->
+<!--      Lưu trữ-->
+<!--    </button>-->
+  </div>
+</div>

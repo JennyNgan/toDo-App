@@ -1,0 +1,26 @@
+.btn-style{
+  border: none;
+  border-radius: 10px;
+  justify-items: center;
+  justify-content: center;
+  &:hover{
+    background-color: darkgray;
+    color: #000;
+
+  }
+}
+
+.row-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  .btn-border{
+    border: 25px;
+  }
+}

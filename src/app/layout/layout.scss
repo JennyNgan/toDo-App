@@ -1,0 +1,42 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+  background: #f5f8ff;
+  transition: all 0.3s ease;
+
+  //app-sidebar {
+  //  width: 240px;
+  //  position: fixed;
+  //  top: 0;
+  //  bottom: 0;
+  //  left: 0;
+  //  height: 100vh;
+  //}
+
+  .app-main {
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    display: flex;
+
+    //app-header {
+    //   //height: 64px;
+    //  background: #fff;
+    //  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+    //  position: sticky;
+    //  top: 0;
+    //  z-index: 100;
+    //}
+
+    .app-content {
+      background: #f5f8ff;
+      flex-grow: 1;
+      overflow-y: auto;
+      width: 100%;
+    }
+  }
+}
+
+app-sidebar:not(.open) ~ .app-main {
+  margin-left: 0 !important;
+}

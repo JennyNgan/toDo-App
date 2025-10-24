@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center fw-bold">
+      <mat-toolbar>
+        <button matIconButton class="example-icon" (click)="onToggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="fw-bold ms-3">Công việc đang làm</span>
+      </mat-toolbar>
+    </div>
+    <div class="me-3 d-flex align-items-center">
+      <button
+        matButton="filled"
+        class="btn d-flex align-items-center btn-color"
+        (click)="openAddDialog()"
+      >
+        <mat-icon class="">add</mat-icon>
+        Thêm mới
+      </button>
+    </div>
+  </div>
+</div>
