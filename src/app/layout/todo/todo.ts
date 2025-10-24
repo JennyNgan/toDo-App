@@ -5,9 +5,8 @@ import {NgForOf, NgIf} from "@angular/common";
 import {Doing as DoingItem, DoingService} from '../../services/doing';
 import {MatIconModule} from '@angular/material/icon';
 import {ActivatedRoute, Router} from '@angular/router';
-import {DeleteDoing} from '../content/doing/delete-doing/delete-doing';
+import {DeleteDoing} from './delete-doing/delete-doing';
 import {MatDialog} from '@angular/material/dialog';
-import {UpdateDoing} from '../content/doing/update-doing/update-doing';
 import {AddUpdateTodo} from './add-update-todo/add-update-todo';
 
 @Component({
